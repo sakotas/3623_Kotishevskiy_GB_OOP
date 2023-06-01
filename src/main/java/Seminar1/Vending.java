@@ -5,10 +5,10 @@ import java.util.List;
 
 public abstract class Vending {
 
-    private final List<Product> listOfProducts;
+    protected final List<Product> listOfProducts;
 
     public Vending() {
-        listOfProducts = new ArrayList<Product>();
+        listOfProducts = new ArrayList<>();
     }
 
     /**
@@ -35,5 +35,6 @@ public abstract class Vending {
         }
         return null;
     }
+
 
 }

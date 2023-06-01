@@ -35,6 +35,10 @@ public abstract class Product {
         return id;
     }
 
+    public int getTemperature(){
+        return 0;
+    }
+
     public void setKind(String kind) {
         this.kind = kind;
     }
