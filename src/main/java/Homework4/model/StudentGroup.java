@@ -1,5 +1,6 @@
-package Homework3;
+package Homework4.model;
 
+import Homework4.service.StudentGroupIterator;
 import lombok.Getter;
 import lombok.ToString;
 
