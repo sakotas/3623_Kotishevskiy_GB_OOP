@@ -22,7 +22,6 @@ public class StudentService implements UserService<Student> {
         Long id = studentRepository.getMaxId() + 1;
         Student student = new Student(id, fullName, age, phoneNumber);
         studentRepository.add(student);
-
     }
 
     @Override

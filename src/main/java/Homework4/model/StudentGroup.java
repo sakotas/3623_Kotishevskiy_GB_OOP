@@ -1,6 +1,6 @@
 package Homework4.model;
 
-import Homework4.service.StudentGroupIterator;
+import Homework4.service.UserGroupIterator;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -21,11 +21,10 @@ public class StudentGroup implements Iterable<Student> {
 
     @Override
     public Iterator<Student> iterator() {
-        return new StudentGroupIterator(studentsList);
+        return new UserGroupIterator<>(studentsList);
     }
 
-
-    public void addStudent(Student student) {
+    public void add(Student student) {
         studentsList.add(student);
     }
 }

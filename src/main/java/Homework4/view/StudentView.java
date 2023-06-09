@@ -26,12 +26,12 @@ public class StudentView implements UserView<Student> {
             System.out.println("Students is null");
             return;
         }
-        System.out.println("=====================");
+        System.out.println("=======СТУДЕНТЫ=======");
         for (Student student: students) {
             System.out.println(student);
 
         }
-        System.out.println("=====================");
+        System.out.println("======================");
     }
 
     @Override
