@@ -1,13 +1,12 @@
-package Homework4.controller;
+package Homework5.controller;
 
-import Homework4.model.Teacher;
-import Homework4.service.TeacherService;
-import Homework4.service.UserService;
+import Homework5.model.Teacher;
+import Homework5.service.TeacherService;
 
 import java.util.List;
 
 public class TeacherController implements UserController<Teacher>{
-    public TeacherService teacherUserService;
+    private TeacherService teacherUserService;
     public TeacherController(TeacherService teacherUserService) {
         this.teacherUserService = teacherUserService;
     }
@@ -16,8 +15,8 @@ public class TeacherController implements UserController<Teacher>{
         teacherUserService.create(fullName, age, phoneNumber);
     }
 
-    public void createWithExperience(String fullName, Integer age, String phoneNumber, Integer experienceYears){
-        teacherUserService.createWithExperience(fullName, age, phoneNumber, experienceYears);
+    public void create(String fullName, Integer age, String phoneNumber, Integer experienceYears){
+        teacherUserService.create(fullName, age, phoneNumber, experienceYears);
     }
 
     @Override
@@ -48,5 +47,9 @@ public class TeacherController implements UserController<Teacher>{
 
     public List<Teacher> getAllSortByExperience() {
         return teacherUserService.getAllSortByExperience();
+    }
+
+    public Teacher getTeacherById(Long id) {
+        return teacherUserService.getTeacherById(id);
     }
 }

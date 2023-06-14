@@ -1,6 +1,6 @@
-package Homework4.view;
+package Homework5.view;
 
-import Homework4.model.User;
+import Homework5.model.User;
 
 public interface UserView<T extends User> {
 

@@ -1,9 +1,10 @@
-package Homework4.service;
+package Homework5.service;
 
-import Homework4.model.Student;
-import Homework4.model.User;
-import Homework4.repository.StudentRepository;
-import Homework4.repository.UserRepository;
+import Homework5.model.Student;
+import Homework5.model.StudentGroup;
+import Homework5.model.User;
+import Homework5.repository.StudentRepository;
+import Homework5.repository.UserRepository;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -54,4 +55,5 @@ public class StudentService implements UserService<Student> {
     public void removeUser(String fullName) {
         studentRepository.remove(fullName);
     }
+
 }

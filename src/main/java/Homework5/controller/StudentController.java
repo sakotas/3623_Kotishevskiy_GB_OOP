@@ -1,14 +1,15 @@
-package Homework4.controller;
+package Homework5.controller;
 
-import Homework4.model.Student;
-import Homework4.service.StudentService;
-import Homework4.service.UserService;
+import Homework5.model.Student;
+import Homework5.model.StudentGroup;
+import Homework5.service.StudentService;
+import Homework5.service.UserService;
 
 import java.util.List;
 
 public class StudentController implements UserController<Student>{
 
-    public UserService<Student> studentService;
+    public StudentService studentService;
 
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
@@ -46,6 +47,5 @@ public class StudentController implements UserController<Student>{
         studentService.removeUser(fullName);
         return true;
     }
-
 
 }

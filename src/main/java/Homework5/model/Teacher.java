@@ -1,7 +1,5 @@
-package Homework4.model;
+package Homework5.model;
 
-import Homework4.service.TeacherService;
-import Homework4.service.UserComparator;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 

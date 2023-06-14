@@ -1,15 +1,16 @@
-package Homework4.view;
+package Homework5.view;
 
-import Homework4.controller.StudentController;
-import Homework4.controller.UserController;
-import Homework4.model.Student;
+import Homework5.controller.StudentController;
+import Homework5.controller.UserController;
+import Homework5.model.Student;
+import Homework5.model.StudentGroup;
 
 import java.util.List;
 
 public class StudentView implements UserView<Student> {
-    UserController<Student> studentController;
+    StudentController studentController;
 
-    public StudentView(UserController<Student> studentController) {
+    public StudentView(StudentController studentController) {
         this.studentController = studentController;
     }
 
@@ -43,4 +44,9 @@ public class StudentView implements UserView<Student> {
     public void removeUser(String fullName) {
         studentController.removeUser(fullName);
     }
+
+    public List<Student> getAll(){
+        return studentController.getAll();
+    }
+
 }

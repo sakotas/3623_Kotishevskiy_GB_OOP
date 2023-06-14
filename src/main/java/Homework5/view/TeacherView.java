@@ -1,9 +1,7 @@
-package Homework4.view;
+package Homework5.view;
 
-import Homework4.controller.TeacherController;
-import Homework4.controller.UserController;
-import Homework4.model.Student;
-import Homework4.model.Teacher;
+import Homework5.controller.TeacherController;
+import Homework5.model.Teacher;
 
 import java.util.List;
 
@@ -42,12 +40,16 @@ public class TeacherView implements UserView<Teacher>{
         teacherUserController.create(fullName, age, phoneNumber);
     }
 
-    public void createWithExperience(String fullName, Integer age, String phoneNumber, Integer experienceYears) {
-        teacherUserController.createWithExperience(fullName, age, phoneNumber, experienceYears);
+    public void create(String fullName, Integer age, String phoneNumber, Integer experienceYears) {
+        teacherUserController.create(fullName, age, phoneNumber, experienceYears);
     }
 
     @Override
     public void removeUser(String fullName) {
 
+    }
+
+    public Teacher getTeacherById(Long id){
+        return teacherUserController.getTeacherById(id);
     }
 }

@@ -1,6 +1,6 @@
-package Homework4.repository;
+package Homework5.repository;
 
-import Homework4.model.User;
+import Homework5.model.User;
 
 import java.util.List;
 

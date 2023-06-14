@@ -1,6 +1,6 @@
-package Homework4.model;
+package Homework5.model;
 
-import Homework4.service.UserGroupIterator;
+import Homework5.service.UserGroupIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;

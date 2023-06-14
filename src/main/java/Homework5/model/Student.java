@@ -1,4 +1,4 @@
-package Homework4.model;
+package Homework5.model;
 
 import lombok.*;
 
@@ -22,10 +22,6 @@ public class Student extends User implements Comparable<Student> {
     public int compareTo(Student o) {
         return getFullName().compareTo(o.getFullName());
     }
-
-//    public int getAge() {
-//        return getAge();
-//    }
 
     @Override
     public String toString() {

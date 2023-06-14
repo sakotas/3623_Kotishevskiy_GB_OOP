@@ -1,7 +1,6 @@
-package Homework4.repository;
+package Homework5.repository;
 
-import Homework4.model.Student;
-import lombok.Getter;
+import Homework5.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;

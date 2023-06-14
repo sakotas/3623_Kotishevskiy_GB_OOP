@@ -1,4 +1,4 @@
-package Homework4.model;
+package Homework5.model;
 
 import lombok.Data;
 

@@ -1,9 +1,9 @@
-package Homework4.service;
+package Homework5.service;
 
-import Homework4.model.Teacher;
-import Homework4.model.User;
-import Homework4.repository.TeacherRepository;
-import Homework4.repository.UserRepository;
+import Homework5.model.Teacher;
+import Homework5.model.User;
+import Homework5.repository.TeacherRepository;
+import Homework5.repository.UserRepository;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TeacherService implements UserService<Teacher> {
 
-    private final UserRepository<Teacher> teacherRepository;
+    private final TeacherRepository teacherRepository;
 
     public TeacherService(TeacherRepository teacherRepository) {
         this.teacherRepository = teacherRepository;
@@ -24,7 +24,7 @@ public class TeacherService implements UserService<Teacher> {
         teacherRepository.add(teacher);
     }
 
-    public void createWithExperience(String fullName, Integer age, String phoneNumber, Integer experienceYears) {
+    public void create(String fullName, Integer age, String phoneNumber, Integer experienceYears) {
         Long id = teacherRepository.getMaxId() + 1;
         Teacher teacher = new Teacher(id, fullName, age, phoneNumber, experienceYears);
         teacherRepository.add(teacher);
@@ -68,5 +68,9 @@ public class TeacherService implements UserService<Teacher> {
         List<Teacher> teachers = teacherRepository.getAll();
         teachers.sort(Comparator.comparing(Teacher::getExperienceYears));
         return teachers;
+    }
+
+    public Teacher getTeacherById(Long id) {
+        return teacherRepository.getTeacherById(id);
     }
 }

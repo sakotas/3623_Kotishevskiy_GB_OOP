@@ -1,4 +1,4 @@
-package Homework4.view;
+package Homework5.view;
 
 public interface SortType {
     String NONE = "none";

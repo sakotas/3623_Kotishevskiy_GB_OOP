@@ -1,8 +1,6 @@
-package Homework4.repository;
+package Homework5.repository;
 
-import Homework4.model.Student;
-import Homework4.model.Teacher;
-import Homework4.service.TeacherService;
+import Homework5.model.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +11,7 @@ public class TeacherRepository implements UserRepository<Teacher> {
     private static List<Teacher> teachers = null;
 
     public TeacherRepository() {
-        teachers = new ArrayList<>();
+        this.teachers = new ArrayList<>();
     }
 
     @Override
@@ -41,10 +39,19 @@ public class TeacherRepository implements UserRepository<Teacher> {
     public Long getMaxId() {
         Long maxId = 0L;
         for (Teacher teacher : teachers) {
-            if(teacher.getId() > maxId) {
+            if (teacher.getId() > maxId) {
                 maxId = teacher.getId();
             }
         }
         return maxId;
+    }
+
+    public Teacher getTeacherById(Long id) {
+        for (Teacher teacher : teachers) {
+            if (teacher.getId() == id){
+                return teacher;
+            }
+        }
+        return null;
     }
 }
