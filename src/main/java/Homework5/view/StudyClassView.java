@@ -16,6 +16,7 @@ public class StudyClassView {
         this.studyClassController.create(teacher, studentGroup);
     }
 
+
     public void showStudyClass(){
         System.out.println("==============================");
         System.out.println("=======ПРЕПОДАВАТЕЛЬ:=========");
